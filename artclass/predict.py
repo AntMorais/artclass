@@ -1,4 +1,4 @@
-# tagifai/predict.py
+# artclass/predict.py
 # Prediction operations.
 
 from distutils.util import strtobool
@@ -7,7 +7,7 @@ from typing import Dict, List
 import numpy as np
 import torch
 
-from tagifai import data, train
+from artclass import data, train
 
 
 def predict(texts: List, artifacts: Dict, device: torch.device = torch.device("cpu")) -> Dict:

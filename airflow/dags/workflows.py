@@ -94,13 +94,13 @@ def model():
     # Optimization
     optimization = BashOperator(
         task_id="optimization",
-        bash_command="echo `tagifai optimize`",
+        bash_command="echo `artclass optimize`",
     )
 
     # Train model
     train = BashOperator(
         task_id="train",
-        bash_command="echo `tagifai train-model`",
+        bash_command="echo `artclass train-model`",
     )
 
     # Evaluate model

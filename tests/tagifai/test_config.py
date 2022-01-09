@@ -1,5 +1,5 @@
-# tests/tagifai/test_config.py
-# Test tagifai/config.py components.
+# tests/artclass/test_config.py
+# Test artclass/config.py components.
 
 from config import config
 

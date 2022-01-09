@@ -4,7 +4,7 @@ SHELL := /bin/bash
 .PHONY: help
 help:
 	@echo "Commands:"
-	@echo "tagifai : list of main operations."
+	@echo "artclass : list of main operations."
 	@echo "venv    : creates development environment."
 	@echo "style   : runs style formatting."
 	@echo "clean   : cleans all unnecessary files."

@@ -1,4 +1,4 @@
-# tagifai/data.py
+# artclass/data.py
 # Data processing operations.
 
 import itertools
@@ -16,7 +16,7 @@ from nltk.stem import PorterStemmer
 from skmultilearn.model_selection import IterativeStratification
 
 from config import config
-from tagifai import utils
+from artclass import utils
 
 
 def filter_items(items: List, include: List = [], exclude: List = []) -> List:

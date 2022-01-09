@@ -10,7 +10,7 @@ import pretty_errors  # NOQA: F401 (imported but unused)
 from rich.logging import RichHandler
 
 # Repository
-AUTHOR = "GokuMohandas"
+AUTHOR = "AntonioMorais"
 REPO = "mlops"
 
 # Directories
@@ -19,6 +19,7 @@ CONFIG_DIR = Path(BASE_DIR, "config")
 LOGS_DIR = Path(BASE_DIR, "logs")
 DATA_DIR = Path(BASE_DIR, "data")
 STORES_DIR = Path(BASE_DIR, "stores")
+MODEL_DIR = Path(BASE_DIR, "model")
 
 # Local stores
 BLOB_STORE = Path(STORES_DIR, "blob")

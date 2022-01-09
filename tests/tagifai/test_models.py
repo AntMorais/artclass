@@ -1,11 +1,11 @@
-# tests/tagifai/test_models.py
-# Test tagifai/models.py components.
+# tests/artclass/test_models.py
+# Test artclass/models.py components.
 
 from argparse import Namespace
 
 import torch
 
-from tagifai import models, utils
+from artclass import models, utils
 
 
 class TestCNN:

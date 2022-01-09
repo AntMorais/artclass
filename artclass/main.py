@@ -1,4 +1,4 @@
-# tagifai/main.py
+# artclass/main.py
 # Main operations with Command line interface (CLI).
 
 import json
@@ -20,7 +20,7 @@ from optuna.integration.mlflow import MLflowCallback
 
 from config import config
 from config.config import logger
-from tagifai import data, eval, models, predict, train, utils
+from artclass import data, eval, models, predict, train, utils
 
 # Ignore warning
 warnings.filterwarnings("ignore")
@@ -228,7 +228,6 @@ def diff(
     return params_diff, performance_diff
 
 
-USE RUN_ID HERE!!!
 @app.command()
 def behavioral_reevaluation(
     model_dir: Path = config.MODEL_DIR,

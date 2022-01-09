@@ -1,0 +1,4 @@
+brew install libjpeg
+brew install miniforge
+# https://scikit-learn.org/stable/install.html#installing-on-apple-silicon-m1-hardware
+conda install scikit-learn

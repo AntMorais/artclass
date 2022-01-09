@@ -1,5 +1,5 @@
-# tests/tagifai/test_data.py
-# Test tagifai/data.py components.
+# tests/artclass/test_data.py
+# Test artclass/data.py components.
 
 import itertools
 import tempfile
@@ -11,7 +11,7 @@ import numpy as np
 import pytest
 
 from config import config
-from tagifai import data, utils
+from artclass import data, utils
 
 
 @pytest.fixture(scope="module")

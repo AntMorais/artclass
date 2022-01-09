@@ -10,7 +10,7 @@ source ${venv_name}/bin/activate
 2. Pull latest model.
 ```bash
 dvc pull experiments
-tagifai fix-artifact-metadata
+artclass fix-artifact-metadata
 ```
 
 3. Run Application
@@ -37,9 +37,9 @@ dvc pull data/tags.json
 dvc pull data/projects.json
 ```
 
-3. Optimize using distributions specified in `tagifai.main.objective`. This also writes the best model's params to [config/params.json](https://github.com/GokuMohandas/MLOps/blob/main/config/params.json)
+3. Optimize using distributions specified in `artclass.main.objective`. This also writes the best model's params to [config/params.json](https://github.com/GokuMohandas/MLOps/blob/main/config/params.json)
 ```bash
-tagifai optimize \
+artclass optimize \
     --params-fp config/params.json \
     --study-name optimization \
     --num-trials 100
@@ -48,7 +48,7 @@ tagifai optimize \
 
 4. Train a model (and save all it's artifacts) using params from [config/params.json](https://github.com/GokuMohandas/MLOps/blob/main/config/params.json) and publish metrics to [metrics/performance.json](https://github.com/GokuMohandas/MLOps/blob/main/metrics/performance.json). You can view the entire run's details inside `experiments/{experiment_id}/{run_id}` or via the API (`GET` /runs/{run_id}).
 ```bash
-tagifai train-model \
+artclass train-model \
     --params-fp config/params.json \
     --experiment-name best \
     --run-name model \
@@ -57,14 +57,14 @@ tagifai train-model \
 
 5. Predict tags for an input sentence. It'll use the best model saved from `train-model` but you can also specify a `run-id` to choose a specific model.
 ```bash
-tagifai predict-tags --text "Transfer learning with BERT"  # test with CLI app
+artclass predict-tags --text "Transfer learning with BERT"  # test with CLI app
 make app env="dev"  # run API and test as well
 ```
 
 6. View improvements
 Once you're done training the best model using the current data version, best hyperparameters, etc., we can view performance difference.
 ```bash
-tagifai diff
+artclass diff
 ```
 
 7. Commit to git

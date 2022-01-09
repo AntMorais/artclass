@@ -1,9 +1,9 @@
-# tests/tagifai/test_eval.py
-# Test tagifai/eval.py components.
+# tests/artclass/test_eval.py
+# Test artclass/eval.py components.
 
 import numpy as np
 
-from tagifai import eval
+from artclass import eval
 
 
 def test_get_metrics():

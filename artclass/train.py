@@ -1,4 +1,4 @@
-# tagifai/train.py
+# artclass/train.py
 # Training operations.
 
 import itertools
@@ -17,7 +17,7 @@ from sklearn.metrics import precision_recall_curve
 
 from config import config
 from config.config import logger
-from tagifai import data, eval, models, utils
+from artclass import data, eval, models, utils
 
 
 class Trainer:

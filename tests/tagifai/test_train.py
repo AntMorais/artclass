@@ -1,9 +1,9 @@
-# tests/tagifai/test_train.py
-# Test tagifai/train.py unit components.
+# tests/artclass/test_train.py
+# Test artclass/train.py unit components.
 
 import numpy as np
 
-from tagifai import train
+from artclass import train
 
 
 def test_find_best_threshold():

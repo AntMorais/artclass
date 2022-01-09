@@ -1,1 +1,1 @@
-::: tagifai.train
+::: artclass.train

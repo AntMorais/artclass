@@ -1,3 +1,3 @@
 
 
-::: tagifai.main
+::: artclass.main

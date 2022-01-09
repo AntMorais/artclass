@@ -1,1 +1,1 @@
-::: tagifai.models
+::: artclass.models

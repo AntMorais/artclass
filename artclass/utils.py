@@ -1,4 +1,4 @@
-# tagifai/utils.py
+# artclass/utils.py
 # Utility functions.
 
 import json
@@ -6,6 +6,7 @@ import numbers
 import random
 from typing import Dict, List
 from urllib.request import urlopen
+import os
 
 import numpy as np
 import pandas as pd
@@ -128,3 +129,22 @@ def dict_diff(d_a: Dict, d_b: Dict, d_a_name="a", d_b_name="b") -> Dict:
             diff[key] = {d_a_name: d_a[key], d_b_name: d_b[key], "diff": d_a[key] - d_b[key]}
 
     return diff
+
+
+
+# Author: António Morais
+def read_class_txt(txt_file):
+    # returns dictionary with key = id and value = label
+    with open(txt_file) as f:
+        lines = f.readlines()
+        lines = [line.strip().split() for line in lines]
+        classes_dict = dict(lines)
+    return classes_dict 
+
+def create_label_dicts_wikiart(path_to_labels):
+    artist_class = read_class_txt(os.path.join(path_to_labels, 'artist_class.txt'))
+    genre_class = read_class_txt(os.path.join(path_to_labels, 'genre_class.txt'))
+    style_class = read_class_txt(os.path.join(path_to_labels, 'style_class.txt'))
+    # change name because of data error
+    style_class['3']='Art_Nouveau_Modern'
+    return artist_class, genre_class, style_class

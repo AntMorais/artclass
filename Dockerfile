@@ -12,7 +12,7 @@ RUN apt-get update \
     && apt-get purge -y --auto-remove gcc build-essential
 
 # Copy
-COPY tagifai tagifai
+COPY artclass artclass
 COPY app app
 COPY data data
 COPY model model

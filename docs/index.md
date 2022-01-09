@@ -1,8 +1,8 @@
 - [Getting started](getting_started.md): Guide for getting started with the library.
 - [Application](app/api.md): description of API endpoints.
-- [Operations](tagifai/main.md): Overview of common operational workflows.
+- [Operations](artclass/main.md): Overview of common operational workflows.
 - [Configuration](config/config.md): Configuration parameters used for the system.
-- [TagIfAI reference](tagifai/data.md): Detailed documentation of each script and it's respective functions and classes.
+- [artclass reference](artclass/data.md): Detailed documentation of each script and it's respective functions and classes.
 
 ## MLOps Lessons
 

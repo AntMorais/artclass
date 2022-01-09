@@ -1,4 +1,4 @@
-# tagifai/eval.py
+# artclass/eval.py
 # Evaluation components.
 
 import itertools
@@ -10,7 +10,7 @@ import torch
 from sklearn.metrics import precision_recall_fscore_support
 from snorkel.slicing import PandasSFApplier, slicing_function
 
-from tagifai import data, predict, train
+from artclass import data, predict, train
 
 
 @slicing_function()

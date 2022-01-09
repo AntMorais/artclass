@@ -8,8 +8,8 @@ import pytest
 from typer.testing import CliRunner
 
 from config import config
-from tagifai import main
-from tagifai.main import app
+from artclass import main
+from artclass.main import app
 
 runner = CliRunner()
 

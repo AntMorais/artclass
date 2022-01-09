@@ -1,5 +1,5 @@
-# tests/tagifai/test_utils.py
-# Test tagifai/utils.py components.
+# tests/artclass/test_utils.py
+# Test artclass/utils.py components.
 
 import tempfile
 from pathlib import Path
@@ -7,7 +7,7 @@ from pathlib import Path
 import numpy as np
 import pytest
 
-from tagifai import utils
+from artclass import utils
 
 
 def test_load_json_from_url():

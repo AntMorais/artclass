@@ -33,17 +33,17 @@ docs_packages = [
 ]
 
 setup(
-    name="tagifai",
+    name="artclass",
     version="0.1",
     license="MIT",
-    description="Tag suggestions for projects on Made With ML.",
-    author="Goku Mohandas",
-    author_email="goku@madewithml.com",
-    url="https://madewithml.com/",
+    description="Style prediction for paintings",
+    author="António Morais",
+    author_email="antoniomorais.nn@gmail.com",
+    url="https://antmorais.github.io",
     keywords=[
         "machine-learning",
-        "artificial-intelligence",
-        "madewithml",
+        "image-classification",
+        "mlops"
     ],
     classifiers=[
         "Development Status :: 3 - Alpha",
@@ -52,7 +52,7 @@ setup(
         "License :: OSI Approved :: MIT License",
         "Programming Language :: Python :: 3",
     ],
-    python_requires="==3.7.10",
+    python_requires="==3.9.7",
     packages=find_namespace_packages(),
     install_requires=[required_packages],
     extras_require={
@@ -62,7 +62,7 @@ setup(
     },
     entry_points={
         "console_scripts": [
-            "tagifai = tagifai.main:app",
+            "artclass = artclass.main:app",
         ],
     },
 )

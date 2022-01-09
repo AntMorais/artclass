@@ -13,11 +13,11 @@ from fastapi import FastAPI, Request
 from app.schemas import PredictPayload
 from config import config
 from config.config import logger
-from tagifai import main, predict
+from artclass import main, predict
 
 # Define application
 app = FastAPI(
-    title="TagIfAI - Made With ML",
+    title="artclass",
     description="Predict relevant tags given a text input.",
     version="0.1",
 )

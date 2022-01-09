@@ -1,1 +1,1 @@
-::: tagifai.predict
+::: artclass.predict

@@ -6,24 +6,24 @@ collected 76 items
 
 tests/app/test_api.py .........                                          [ 11%]
 tests/app/test_cli.py ........                                           [ 22%]
-tests/tagifai/test_config.py .                                           [ 23%]
-tests/tagifai/test_data.py ...........................................   [ 80%]
-tests/tagifai/test_eval.py .                                             [ 81%]
-tests/tagifai/test_models.py ...                                         [ 85%]
-tests/tagifai/test_train.py .                                            [ 86%]
-tests/tagifai/test_utils.py ..........                                   [100%]
+tests/artclass/test_config.py .                                           [ 23%]
+tests/artclass/test_data.py ...........................................   [ 80%]
+tests/artclass/test_eval.py .                                             [ 81%]
+tests/artclass/test_models.py ...                                         [ 85%]
+tests/artclass/test_train.py .                                            [ 86%]
+tests/artclass/test_utils.py ..........                                   [100%]
 
 ---------- coverage: platform darwin, python 3.7.10-final-0 ----------
 Name                 Stmts   Miss  Cover
 ----------------------------------------
-tagifai/config.py       30      0   100%
-tagifai/data.py        196      0   100%
-tagifai/eval.py         82      0   100%
-tagifai/main.py         95      0   100%
-tagifai/models.py       38      0   100%
-tagifai/predict.py      21      0   100%
-tagifai/train.py        86      0   100%
-tagifai/utils.py        49      0   100%
+artclass/config.py       30      0   100%
+artclass/data.py        196      0   100%
+artclass/eval.py         82      0   100%
+artclass/main.py         95      0   100%
+artclass/models.py       38      0   100%
+artclass/predict.py      21      0   100%
+artclass/train.py        86      0   100%
+artclass/utils.py        49      0   100%
 ----------------------------------------
 TOTAL                  597      0   100%
 

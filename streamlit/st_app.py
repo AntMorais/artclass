@@ -13,7 +13,7 @@ from wordcloud import STOPWORDS, WordCloud
 
 import streamlit as st
 from app import cli, config
-from tagifai import data, eval, main, utils
+from artclass import data, eval, main, utils
 
 
 @st.cache
@@ -88,7 +88,7 @@ def evaluate_df(df, tags_dict, artifacts):
 
 
 # Title
-st.title("Tagifai · MLOps · Made With ML")
+st.title("artclass · MLOps · Made With ML")
 """by [Goku Mohandas](https://twitter.com/GokuMohandas)"""
 st.info("🔍 Explore the different pages below.")
 

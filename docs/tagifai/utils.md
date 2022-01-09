@@ -1,1 +1,1 @@
-::: tagifai.utils
+::: artclass.utils

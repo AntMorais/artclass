@@ -116,7 +116,7 @@ config/
 ├── config.py        - configuration setup
 ├── params.json      - training parameters
 └──  test_params.py  - training test parameters
-tagifai/
+artclass/
 ├── data.py          - data processing components
 ├── eval.py          - evaluation components
 ├── main.py          - training/optimization pipelines
@@ -138,7 +138,7 @@ source venv/bin/activate
 2. Get data
 ```bash
 # Download to data/
-tagifai download-auxiliary-data
+artclass download-auxiliary-data
 
 # or Pull from DVC
 dvc init
@@ -148,12 +148,12 @@ dvc pull
 
 3. Compute features
 ```bash
-tagifai compute-features
+artclass compute-features
 ```
 
-4. Optimize using distributions specified in `tagifai.main.objective`. This also writes the best model's params to [config/params.json](https://github.com/GokuMohandas/MLOps/blob/main/config/params.json)
+4. Optimize using distributions specified in `artclass.main.objective`. This also writes the best model's params to [config/params.json](https://github.com/GokuMohandas/MLOps/blob/main/config/params.json)
 ```bash
-tagifai optimize \
+artclass optimize \
     --params-fp config/params.json \
     --study-name optimization \
     --num-trials 100
@@ -162,7 +162,7 @@ tagifai optimize \
 
 5. Train a model (and save all it's artifacts) using params from [config/params.json](https://github.com/GokuMohandas/MLOps/blob/main/config/params.json) and publish metrics to [model/performance.json](https://github.com/GokuMohandas/MLOps/blob/main/model/performance.json). You can view the entire run's details inside `experiments/{experiment_id}/{run_id}` or via the API (`GET` /runs/{run_id}).
 ```bash
-tagifai train-model \
+artclass train-model \
     --params-fp config/params.json \
     --model-dir model \
     --experiment-name best \
@@ -173,7 +173,7 @@ tagifai train-model \
 
     - Command-line app
         ```bash
-        tagifai predict-tags --text "Transfer learning with BERT"
+        artclass predict-tags --text "Transfer learning with BERT"
         ```
 
     - FastAPI
@@ -182,14 +182,14 @@ tagifai train-model \
             --host 0.0.0.0 \
             --port 5000 \
             --reload \
-            --reload-dir tagifai \
+            --reload-dir artclass \
             --reload-dir app
         ```
 
 7. View improvements
 Once you're done training the best model using the current data version, best hyperparameters, etc., we can view performance difference.
 ```bash
-tagifai diff
+artclass diff
 ```
 
 8. Push versioned assets
@@ -225,13 +225,13 @@ pre-commit autoupdate
 
 ### Docker
 ```bash
-docker build -t tagifai:latest -f Dockerfile .
-docker run -p 5000:5000 --name tagifai tagifai:latest
+docker build -t artclass:latest -f Dockerfile .
+docker run -p 5000:5000 --name artclass artclass:latest
 ```
 
 ### Application
 ```bash
-uvicorn app.api:app --host 0.0.0.0 --port 5000 --reload --reload-dir tagifai --reload-dir app  # dev
+uvicorn app.api:app --host 0.0.0.0 --port 5000 --reload --reload-dir artclass --reload-dir app  # dev
 gunicorn -c app/gunicorn.py -k uvicorn.workers.UvicornWorker app.api:app  # prod
 ```
 
@@ -297,8 +297,8 @@ python -m mkdocs serve
 
 - Full coverage testing
     ```bash
-    pytest tests --cov tagifai --cov app  # report in STDOUT
-    pytest tests --cov tagifai --cov app --cov-report html  # report in htmlcov/
+    pytest tests --cov artclass --cov app  # report in STDOUT
+    pytest tests --cov artclass --cov app --cov-report html  # report in htmlcov/
     ```
 
 - Testing only the non-training components
@@ -308,12 +308,12 @@ python -m mkdocs serve
 
 ### Jupyterlab
 ```bash
-python -m ipykernel install --user --name=tagifai
+python -m ipykernel install --user --name=artclass
 jupyter labextension install @jupyter-widgets/jupyterlab-manager
 jupyter labextension install @jupyterlab/toc
 jupyter lab
 ```
-> You can also run all notebooks on [Google Colab](https://colab.research.google.com/github/GokuMohandas/MLOps/blob/main/notebooks/tagifai.ipynb).
+> You can also run all notebooks on [Google Colab](https://colab.research.google.com/github/GokuMohandas/MLOps/blob/main/notebooks/artclass.ipynb).
 
 ## FAQ
 

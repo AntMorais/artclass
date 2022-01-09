@@ -1,16 +1,16 @@
 # Project information
-site_name: TagIfAI
-site_url: https://madewithml.com/#mlops
-site_description: Tag suggestions for projects on Made With ML.
-site_author: Goku Mohandas
+site_name: artclass
+site_url: https://antmorais.github.io
+site_description: Style prediction of paintings
+site_author: António Morais
 
 # Repository
-repo_url: https://github.com/GokuMohandas/MLOps
-repo_name: GokuMohandas/MLOps
+repo_url: https://github.com/AntMorais/artclass
+repo_name: AntMorais/artclass
 edit_uri: "" #disables edit button
 
 # Copyright
-copyright: Copyright &copy; 2021
+copyright: Copyright &copy; 2022
 
 # Social media
 extra:
@@ -83,7 +83,7 @@ plugins:
             show_source: true
             show_category_heading: true
       watch:
-        - tagifai
+        - artclass
 
 # Extra CSS
 extra_css:
@@ -98,14 +98,14 @@ extra_javascript:
 # Page tree
 nav:
   - Home:
-      - TagIfAI: index.md
+      - artclass: index.md
   - Getting started: getting_started.md
-  - Operations: tagifai/main.md
+  - Operations: artclass/main.md
   - Configurations: config/config.md
   - Reference:
-    - Data: tagifai/data.md
-    - Eval: tagifai/data.md
-    - Models: tagifai/models.md
-    - Training: tagifai/train.md
-    - Inference: tagifai/predict.md
-    - Utilities: tagifai/utils.md
+    - Data: artclass/data.md
+    - Eval: artclass/data.md
+    - Models: artclass/models.md
+    - Training: artclass/train.md
+    - Inference: artclass/predict.md
+    - Utilities: artclass/utils.md
